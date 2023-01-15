@@ -80,12 +80,13 @@ class _EditProfileState extends State<EditProfile> {
                   SizedBox(height: 20),
 
                   Container(margin: EdgeInsets.only(left: 20, bottom: 5), child: Text('Phone', style: TextStyle(fontSize: 13, color: Get.theme.primaryColor))),
-                  TextFormField(
-                    initialValue: newAttendance.phone,
-                    onChanged: (val) {
-                      newAttendance.phone = val;
-                    },
-                  ),
+                  // TextFormField(
+                  //   initialValue: newAttendance.phone,
+                  //   onChanged: (val) {
+                  //     newAttendance.phone = val;
+                  //   },
+                  // ),
+                  Container(margin: EdgeInsets.only(left: 20, bottom: 5), child: Text(newAttendance.phone, style: TextStyle(fontWeight: FontWeight.bold))),
 
                   SizedBox(height: 20),
 

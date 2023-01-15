@@ -111,8 +111,9 @@ class MyController extends GetxController {
     try {
       ResponseOrError response = await HttpRequest.getResponse();
       if (response.response != null) {
-        myUserHive.value.attendances = response.response!.data!.toList();
-        await myUserHive.value.save();
+        myUserHive.value
+          ..attendances = response.response!.data!.toList()
+          ..save();
         Get
           ..closeAllSnackbars()
           ..snackbar('Attendances', 'Synced!', snackPosition: SnackPosition.BOTTOM, icon: Icon(Icons.check_circle, color: Colors.green));
